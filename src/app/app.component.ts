@@ -36,6 +36,10 @@ export class AppComponent {
       return
     }
     this.errorMessage = '';
+
+    if (this.numberOfTeams > this.members.length) {
+      this.errorMessage = 'Not enough members.'
+    }
     while (allMembers.length) {
     // Create an array for each team.
 
