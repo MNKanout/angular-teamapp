@@ -32,8 +32,10 @@ export class AppComponent {
     const allMembers = [...this.members]
     // Number of teams has to be positive number 
     if(!this.numberOfTeams || this.numberOfTeams <= 0){
+      this.errorMessage = 'Invalid number of teams.'
       return
     }
+    this.errorMessage = '';
     while (allMembers.length) {
     // Create an array for each team.
 
